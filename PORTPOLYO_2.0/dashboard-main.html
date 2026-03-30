@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charles Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Croissant+One&family=Kanit:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- MOUSE GLOW -->
+<div class="cursor-glow"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+    <ul>
+        <li><a href="Resumeeee.html">MY RESUME</a></li>
+        <li><a href="https://github.com/Charles2500" target="_blank" rel="noopener noreferrer">GITHUB</a></li>
+        <li><a href="https://www.facebook.com/cccchrls" target="_blank" rel="noopener noreferrer">FACEBOOK</a></li>
+    </ul>
+</nav>
+
+<!-- HEADER -->
+<header class="banner">
+    <div class="content">
+        <h1>Charles Kent Duron</h1>
+        <p class="subtitle">Computer Science Graduate • Frontend Developer</p>
+    </div>
+</header>
+
+<!-- DASHBOARD -->
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h1>Charles Kent Duron</h1>
+        <p>Computer Science Graduate 2025</p>
+
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <section id="about" class="card reveal">
+            <h2>About Me</h2>
+            <p>
+                Detail-oriented and highly motivated Computer Science graduate with a strong
+passion for design and front-end web development. Experienced in building responsive and
+user-friendly interfaces using Angular and Laravel, with hands-on exposure to GraphQLbased systems. Adept at translating system requirements and mockups into clean,
+functional UI components. Seeking an entry-level or junior developer role in a forwardthinking organization where I can contribute technical skills, creativity, and a strong work
+ethic while continuously growing as a professional.
+
+            </p>
+        </section>
+
+        <section id="skills" class="card reveal">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">Angular</div>
+                <div class="skill">Problem Solving</div>
+                <div class="skill">Fast Learner</div>
+            </div>
+        </section>
+
+        <section id="projects" class="card reveal">
+            <h2>Projects</h2>
+            <div class="projects">
+
+                <div class="project">
+                    <h3>Portfolio Website</h3>
+                    <p>Clean UI showcasing my work.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Weather App</h3>
+                    <p>Real-time weather API integration.</p>
+                </div>
+
+                <div class="project">
+                    <h3>Library System</h3>
+                    <p>Java-based system.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="card reveal">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:charlesduron997@gmail.com">charlesduron997@gmail.com</a></p>
+            <p>
+                LinkedIn:
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                    linkedin.com/in/charles
+                </a>
+            </p>
+        </section>
+
+    </main>
+
+</div>
+
+<!-- JS -->
+<script>
+/* SCROLL REVEAL */
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+    reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+            el.classList.add("active");
+        }
+    });
+});
+
+/* MOUSE GLOW */
+const glow = document.querySelector(".cursor-glow");
+
+document.addEventListener("mousemove", e => {
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
+});
+</script>
+
+</body>
+</html>
